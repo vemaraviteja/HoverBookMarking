@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header h1{
+            text-transform: capitalize;
+            text-shadow: 5px 5px 5px red;
+            color: rgb(59, 38, 138);
+        }
+        .div1, .div2{
+            display: inline-block;
+            margin-left: 30px;
+            float: left;
+            margin-top: 60px;
+        }
+        .div1{
+            margin-top: 100px;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration:none;
+            color: goldenrod;
+        }
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        a:hover{
+            color: pink;
+        }
+        a:active{
+            color: black;
+        }
+        
+        .div1{
+            border: 3px solid red;
+            box-shadow: 15px 15px 15px red;
+            width: fit-content;
+        }
+        .div2{
+            border: 2px solid #ff0095;
+            width:300px;
+            height: 250px;
+            overflow: auto;
+            margin-left: 250px;
+            color: #065294;
+            box-shadow: 25px 25px 25px darkmagenta;
+        }
+        .div2>div>p{
+            overflow: scroll;
+            width: 200px;
+            height: 200px;
+        }
+        .div2>div{
+            background-color: black;
+        }
+        .div2 #link1:hover{
+            background-color: hsl(167, 78%, 50%);
+        }
+        .div2 #link2:hover{
+            background-color: hsl(125, 71%, 49%);
+        }
+        .div2 #link3:hover{
+            background-color: hwb(4 2% 42%);
+        }
+        .div2 #link4:hover{
+            background-color: rgb(196, 154, 197);
+        }
+        .div2 #link5:hover{
+            background-color: hwb(71 2% 42%);
+        }
+        /*
+        .div2>:nth-child(1):hover{
+            background-color: #00ff95;
+        }
+        .div2>:nth-child(2):hover{
+            background-color: hwb(268 0% 0%);
+        }
+        .div2>:nth-child(3):hover{
+            background-color: hsl(350, 100%, 50%);
+        }
+        .div2>:nth-child(4):hover{
+            background-color: hsl(64, 100%, 50%);
+        }
+        .div2>:nth-child(5):hover{
+            background-color: hwb(34 0% 0%);
+        }
+        */
+    </style>
+</head>
+<body>
+    <header><h1>Hey!! please hover on the right box after clicking the link to see the hover effect</h1></header>
+    <div class="div1">
+        <nav>
+            <ul>
+                <a href="#link1"><li>css-font style</li></a>
+                <a href="#link2"><li>css font size</li></a>
+                <a href="#link3"><li>opacity</li></a>
+                <a href="#link4"><li>outline</li></a>
+                <a href="#link5"><li>overflow</li></a>
+            </ul>
+        </nav>
+    </div>
+    <div class="div2">
+        <div id="link1">
+            <h1>FONT STYLE</h1>
+            <p class="fontstyle">The CSS font-family Property
+                In CSS, we use the font-family property to specify the font of a text.
+                Note: If the font name is more than one word, it must be in quotation marks, like: "Times New Roman".
+                Tip: The font-family property should hold several font names as a "fallback" 
+                system, to ensure maximum compatibility between browsers/operating systems. 
+                Start with the font you want, and end with a generic family (to let the browser 
+                pick a similar font in the generic family, if no other fonts are available).
+                 The font names should be separated with comma. Read more about fallback fonts
+            </p>
+        </div><hr>
+        <div id="link2">
+            <h1>FONT SIZE</h1>
+            <p class="font-size">
+                The font-size property sets the size of the text.
+                Being able to manage the text size is important in web design. 
+                However, you should not use font size adjustments to make paragraphs 
+                look like headings, or headings look like paragraphs.
+                Always use the proper HTML tags, like for headings and for paragraphs.
+                The font-size value can be an absolute, or relative size.
+                Absolute size:
+                Sets the text to a specified size
+                Does not allow a user to change the text size in all browsers (bad for accessibility reasons)
+                Absolute size is useful when the physical size of the output is known
+                Relative size:
+                Sets the size relative to surrounding elements
+                Allows a user to change the text size in browsers
+                Note: If you do not specify a font size, the default size
+                for normal text, like paragraphs, is 16px (16px=1em).
+            </p>
+        </div><hr>
+        <div id="link3">
+            <h1>Opacity</h1>
+            <p class="opacity">The opacity property sets the opacity level for an element.
+                The opacity-level describes the transparency-level, where 1 is not transparent 
+                at all, 0.5 is 50% see-through, and 0 is completely transparent.</p>
+        </div><hr>
+        <div id="link4">
+            <h1>outline</h1>
+            <p class="outline">
+                The outline-style property specifies the style of the 
+                outline, and can have one of the following values:
+                dotted - Defines a dotted outline
+                dashed - Defines a dashed outline
+                solid - Defines a solid outline
+                double - Defines a double outline
+                groove - Defines a 3D grooved outline
+                ridge - Defines a 3D ridged outline
+                inset - Defines a 3D inset outline
+                outset - Defines a 3D outset outline
+                none - Defines no outline
+                hidden - Defines a hidden outline
+            </p>
+        </div><hr>
+        <div id="link5">
+            <h1>overflow</h1>
+            <p class="overflow">
+                The overflow property specifies whether to clip the content or 
+                to add scrollbars when the content of an element is too big to fit in the specified area.
+                The overflow property has the following values:
+                visible - Default. The overflow is not clipped. The content renders outside the element's box
+                hidden - The overflow is clipped, and the rest of the content will be invisible
+                scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+                auto - Similar to scroll, but it adds scrollbars only when necessary
+                Note: The overflow property only works for block elements with a specified height.
+                Note: In OS X Lion (on Mac), scrollbars are hidden by default and only shown when being 
+                used (even though "overflow:scroll" is set).
+            </p>
+        </div>
+    </div>
+</body>
+</html>
